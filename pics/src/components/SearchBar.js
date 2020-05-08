@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
     // NB. this format binds the function to the object automatically
     onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(`submitting ${this.state.term}`);
+        this.props.onSubmit(this.state.term);
     }
 
     render() {
